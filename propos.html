@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8	">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stockam</title>
+  <!-- Font Awesome CSS for social icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS for basic styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<link rel="icon" type="image/png" href="https://github.com/Lguenole/Lguenole.github.io/blob/main/Equipement%20industriels.jpg?raw=true">
+
+  
+  <style>
+ .bar_menu_1 { 
+  background-color: #0000FF; /*couleur */
+  width: 80%;
+  height: 30px;
+  top: 0;   
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin-left: auto; 
+  margin-right: auto;  
+  display: flex;
+   z-index: 5;
+ }  
+  .lien_navigation_objet {
+   margin-left: auto;
+}   
+  .lien_navigation_entete {
+margin-right: 5px; 
+font-family: "Arial", sans-serif;
+text-decoration: none; 
+position: relative;
+color: #000; 
+ }
+  .lien_navigation_entete::after {
+      content: '';
+      position: absolute;
+      width: 0px; 
+      height: 1px;
+      background-color: transparent; 
+      bottom: -4px;
+      left: 0px; 
+      transition: width 0.3s ease; 
+ }
+  .lien_navigation_entete:hover::after {
+      width: 100%; 
+	   background-color: black;
+ }
+ 
+ 
+ 
+ 
+ .bar_menu_2 {  
+   background-color: #ffffff; /*couleur, à remplacer par #ffffff */
+  width: 80%;
+  height: 80px;
+  top: 30px;   
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin-left: auto; 
+  margin-right: auto; 
+  display: flex;
+   z-index: 5;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+ .bar_menu_deroulant_1 {   
+  background-color: #0000FF; /*couleur */
+  width: 80%;
+  height: 30px;
+  top: -300px;   
+  left: 0;
+  right: 0;
+  margin-left: auto; 
+  margin-right: auto;
+  display: flex;  
+  transition: top 0.3s ease; /* Transition for smooth animation */
+  z-index: 10;
+  position: fixed;
+  }  
+  
+ .bar_menu_deroulant_2 {
+  background-color: #ffffff; /*couleur */
+  width: 80%;
+  height: 80px;
+  top: -200px;   
+  left: 0;
+  right: 0;
+  display: flex;
+  position: fixed;
+  margin-left: auto; 
+  margin-right: auto; 
+  border-radius-bottom-left: 30px;
+  border-radius-bottom-right: 30px;
+  transition: top 0.9s ease; /* Transition for smooth animation */
+  z-index: 10;
+ }
+    .lien_navigation_objet {
+   margin-left: auto;
+}   
+  .lien_navigation_entete-2 {
+margin-right: 5px; 
+font-family: "Arial", sans-serif;
+text-decoration: none; 
+position: relative;
+color: #000; 
+margin-bottom: auto;
+ }
+  .lien_navigation_entete-2::after {
+      content: '';
+      position: absolute;
+      width: 0px; 
+      height: 1px;
+      background-color: transparent; 
+      bottom: -1px;
+      left: 0px; 
+      transition: width 0.3s ease; 
+ }
+  .lien_navigation_entete-2:hover::after {
+      width: 100%; 
+	   background-color: black;
+ }
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.bar_menu_deroulant_1.visible {
+  top: 0; /* Slide in from the 	left */
+}
+
+.bar_menu_deroulant_2.visible {
+  top: 30px; /* Slide in from the left */
+}
+
+ 
+ 
+ 
+ 
+ 
+ .logo_stockam {
+ display: flex;
+ width: 148px;
+ margin-right: auto;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .image_RS_objet {
+ display: flex;
+  margin-left: auto;
+  color: white;
+ } 
+ .image_RS_1 {
+ display: flex;
+ width: 30px;
+ } 
+ .image_RS_2 {
+ display: flex;
+ width: 30px;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+.carousel-item img {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+    }
+ 
+ 
+ 
+ 
+.cadre-titre {
+background-color: #0000FF; /* Light blue background color */
+color: #fff; /* White text color */
+padding: 10px 20px; /* Adjust padding as needed */
+border-radius: 5px; /* Rounded corners */
+display: inline-block; /* Ensure it's inline with the text */
+font-family: "Arial", sans-serif;
+font-weight: bold;
+font-size: 28px;
+	  }
+
+.lien-navigation-2 {
+background-color: #0000FF; /* Light blue background color */
+color: #fff; /* White text color */
+padding: 10px 20px; /* Adjust padding as needed */
+border-radius: 60px; /* Rounded corners */
+display: inline-block; /* Ensure it's inline with the text */
+font-family: "Arial", sans-serif;
+font-weight: bold;
+font-size: 16px;
+
+}
+
+
+
+	  
+	  
+	  
+	  
+.illustration-image-1 {
+height: 450px;
+width: 575px;
+border-radius: 30px;
+}
+.illustration-image-2 {
+height: 450px;
+width: 575px;
+border-radius: 30px;
+}
+.illustration-image-3 {
+display: flex;
+border-radius: 30px;
+}
+
+
+
+.rectangle-1 {
+display: flex;
+}
+.rectangle-2 {
+display: flex;
+
+}
+.rectangle-1 {
+flex-direction: row;
+display: flex;
+width: 100;
+}
+
+.lien_navigation_corp-1 {
+color: White;
+text-decoration: none;
+margin-right: 5px; 
+font-family: "Arial", sans-serif;
+text-decoration: none; 
+position: relative; 
+margin-bottom: auto;
+
+
+ }
+  .lien_navigation_corp-1::after {
+      content: '';
+      position: absolute;
+      width: 0px; 
+      height: 2px;
+      background-color: transparent; 
+      bottom: -2px;
+      left: 0px; 
+      transition: width 0.3s ease; 
+ }
+  .lien_navigation_corp-1:hover::after {
+      width: 100%; 
+	   background-color: White;
+}
+
+
+
+
+.Rectangle-3 {
+      width: 80%;
+      display: flex;
+       background-color: #0000FF; 
+	   Font-color: White;
+	   position: absolute;
+	   margin-left: auto;
+	   margin-right: auto;
+	   border-radius: 5px;	   
+	   }
+	   
+	   
+.texte-Rectangle-3 {
+color: #fff;
+}
+
+
+.texte-Rectangle-4 {
+color: #ffffff;
+margin-left: auto;
+}
+
+ 
+ .image_RS_objet-2 {
+ display: flex;
+ width: 60px;
+  margin-left: 0px;
+  margin-top: auto;
+  color: white;
+ } 
+ .image_RS_3 {
+ display: flex;
+ width: 30px;
+ height: 30px;
+ } 
+ .image_RS_4 {
+ display: flex;
+ width: 30px;
+  height: 30px;
+ }
+ 
+ 
+ .nav-link {
+ margin-right: 5px; 
+font-family: "Arial", sans-serif;
+text-decoration: none; 
+position: relative; 
+margin-bottom: auto;
+ }
+  .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0px; 
+      height: 1px;	
+      background-color: transparent; 
+      bottom: -1px;
+      left: 0px; 
+      transition: width 0.3s ease; 
+ }
+  .nav-link:hover::after {
+      width: 100%; 
+	   background-color: White;
+ }
+  
+
+ 
+ 
+   </style>
+  </head>
+  <body>
+  
+ <nav class="bar_menu_1">
+
+
+<nav class="image_RS_objet">
+   <span>Tél. +33.3.87.85.09.47</span>
+   <a class="image_RS_1" href="https://fr.linkedin.com/company/stockam-equipements-industriels" target="_blank" ><img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/icone2link.jpg?raw=true"></a>
+   <a class="image_RS_2" href="https://www.facebook.com/p/STOCKAM-ei-100067222554469/" target="_blank" "><Image src="https://github.com/Lguenole/Lguenole.github.io/blob/main/iconeFB2.jpg?raw=true">	</a>   
+ </nav>
+ 
+</nav>
+  
+  
+  
+  
+  
+  
+ <nav class="bar_menu_2">
+ 
+   <a class="logo_stockam" href="https://lguenole.github.io/" ><Image src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Equipement%20industriels.jpg?raw=true"></a>  
+
+   
+ <nav class=lien_navigation_objet>
+	
+   <a class="lien_navigation_entete" href="societe.html#">|  Societe  |</a>		 
+
+    <a class="lien_navigation_entete" href="produits.html#">|  produits  |</a>
+     	        
+    <a class="lien_navigation_entete" href="offres.html#">|  nos offres  |</a>
+       	   
+   <a class="lien_navigation_entete" href="propos.html#">|  à propos  |</a>
+   
+ </nav>   
+</nav>
+  
+  
+  
+  
+  
+  
+  <nav class="bar_menu_deroulant_1">
+  <nav class="image_RS_objet">
+   <span>Tél. +33.3.87.85.09.47</span>
+   <a class="image_RS_1" href="https://fr.linkedin.com/company/stockam-equipements-industriels" target="_blank" ><img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/icone2link.jpg?raw=true"></a>
+   <a class="image_RS_2" href="https://www.facebook.com/p/STOCKAM-ei-100067222554469/" target="_blank" "><Image src="https://github.com/Lguenole/Lguenole.github.io/blob/main/iconeFB2.jpg?raw=true">	</a>   
+ </nav>
+ 
+  </nav>
+  <nav class="bar_menu_deroulant_2">
+     <a class="logo_stockam" href="https://lguenole.github.io/"><img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Equipement%20industriels.jpg?raw=true" alt="Company Logo"></a>
+  
+     <a class="lien_navigation_entete-2" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">|  Societe  |</a>		 
+
+    <a class="lien_navigation_entete-2" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">|  produits  |</a>
+     	        
+    <a class="lien_navigation_entete-2" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">|  nos offres  |</a>
+       	   
+   <a class="lien_navigation_entete-2" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">|  à propos  |</a>
+   
+ </nav> 
+  </nav>
+  
+  
+  
+  
+  
+  
+  
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/001.JPG?raw=true" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/002.JPG?raw=true" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/16688mhs.JPG?raw=true" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Image9.jpg?raw=true" class="d-block w-100" alt="Slide 4">
+    </div>
+    <div class="carousel-item">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/JSZL2322.JPG?raw=true" class="d-block w-100" alt="Slide 5">
+    </div>
+    <div class="carousel-item">
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/16688mhs.JPG?raw=true" class="d-block w-100" alt="Slide 6">
+    </div>
+  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+	 <div class="cadre-titre">Conception – Fabrication - Installation</div>
+      
+      <div class="section-text";>
+        <p>Stockam Equipement Industriels c'est plus de 30 années d'expérience au service de la conception, de la fabrication et de la commercialisation de solutions de stockage, de charpentes techniques et process.</p>
+        <p>. Grace à l'analyse rigoureuse de votre projet nous sommes en mesure d'optimiser les coûts pour la réalisation et la mise en oeuvre de plateformes,</p>
+        <p>de mezzanines sur rayonnages, de charpentes process, de stockage dynamique ou encore d'équipements industriels spécifiques à  vos besoins. </p>
+		<p>Stockam est certifiée ISO depuis 2007 et est auditée à intervalles réguliers. C’est vous, nos clients, qui en profitez. </p>
+		
+		
+
+
+<div class="lien-navigation-2"><a class="lien_navigation_corp-1"Z.pptx" download> Cliquer ici pour téléchager notre documentation </a> </div>
+
+      </div>
+    </div>
+      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/16688mhs.JPG?raw=true" class="illustration-image-1" alt="Illustration Image">
+</div>
+
+<br></br>
+<br></br>
+
+
+
+  <div class="cadre-titre">Charpente techniques</div>
+  <br></br>
+  <div class="rectangle-1">
+  <div class="row">
+    <div class="col-md">
+      <div class="image-box">
+        <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/16688mhs.JPG?raw=true" class="illustration-image-2" alt="Image 1">
+		      </div>
+      <div class="section-text">
+        <p>Text related to Image 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis faucibus tortor, at sagittis odio.</p>
+		<div class="lien-navigation-2"><a class="lien_navigation_corp-1" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">  à propos..  </a></div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="image-box">
+        <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Image9.jpg?raw=true" class="illustration-image-2" alt="Image 2">
+      </div>
+      <div class="section-text">
+        <p>Text related to Image 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis faucibus tortor, at sagittis odio.</p>
+		
+		
+		  <div class="lien-navigation-2"><a class="lien_navigation_corp-1" href="file:///C:/Users/Alain/Desktop/2023%20louis/Site/main3.html#">  à propos.. </a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br></br>
+<br></br>
+
+
+
+
+
+ <div class="cadre-titre">Stockage Dynamique</div>
+ 
+ <br></br>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+	<u>
+      <h3>Nos solutions de stockage gravitaire</h3>
+	  </u>		 
+	      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Capture1.JPG?raw=true" class="illustration-image-3" alt="Sub Genre 2">
+		        <p>Text for Subsection Title 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		      </div>
+		        <div class="col-md"> 
+
+<u>
+      <h3>Plateforme Profile Froid</h3>
+	  </u>
+	      <img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/Capture2.JPG?raw=true" class="illustration-image-3" alt="Sub Genre 3">
+      <p>Text for Subsection Title 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="Rectangle-3">
+  <div>
+    <div class="texte-Rectangle-3">
+      <p>&nbsp;STOCKAM.EI</p>
+      <p>&nbsp;Addresse : Rue Denis Papin, 57600 Schœneck, France</p>
+	     <p>&nbsp;Tél. +33.3.87.85.09.47</p>
+    </div>
+  </div>
+  <div class="texte-Rectangle-4">
+     <a class="nav-link" href="societe.html#">Societe</a>		 
+
+    <a class="nav-link"href="produits.html#">produits</a>
+     	        
+    <a class="nav-link"href="offres.html#">nos offres</a>
+       	   
+   <a class="nav-link"href="propos.html#">à propos</a>
+      </div>
+    <div class="image_RS_objet-2">
+   <a class="image_RS_3" href="https://fr.linkedin.com/company/stockam-equipements-industriels" target="_blank" ><img src="https://github.com/Lguenole/Lguenole.github.io/blob/main/icone2link.jpg?raw=true"></a>
+   <a class="image_RS_4" href="https://www.facebook.com/p/STOCKAM-ei-100067222554469/" target="_blank" "><Image src="https://github.com/Lguenole/Lguenole.github.io/blob/main/iconeFB2.jpg?raw=true">	</a>     
+  </div>
+  </div>	
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <script>
+window.addEventListener('scroll', function() {
+  var bar_menu_deroulant_1 = document.querySelector('.bar_menu_deroulant_1');
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) {
+    bar_menu_deroulant_1.classList.add('visible'); // Add visible class to slide in
+  } else {
+    bar_menu_deroulant_1.classList.remove('visible'); // Remove visible class to slide out
+  }
+});
+</script>  
+  <script>
+window.addEventListener('scroll', function() {
+  var bar_menu_deroulant_2 = document.querySelector('.bar_menu_deroulant_2');
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) {
+    bar_menu_deroulant_2.classList.add('visible'); // Add visible class to slide in
+  } else {
+    bar_menu_deroulant_2.classList.remove('visible'); // Remove visible class to slide out
+  }
+});
+</script>
+
+  
+  
+  
+  </body>
+  </html>
+  
+ 
